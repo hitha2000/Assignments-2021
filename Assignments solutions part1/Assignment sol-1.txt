@@ -1,4 +1,6 @@
 /* ------------ Question 1 ---------------
+Q1. Write a program that takes three integer command-line arguments and prints equal if all three are equal, and not equal otherwise.
+
 package com.company;
 
 import java.util.Scanner;
@@ -24,6 +26,8 @@ public class Main {
 */
 
 /*-------------- Question 2 ---------------
+Q2. Write a Java program to sort a given binary array in linear times. b_nums[] = { 0, 1, 1, 0, 1, 1, 0, 1, 0, 0 } Output: After sorting: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+
 package com.company;
 
 import java.lang.reflect.Array;
@@ -59,6 +63,8 @@ public class Main {
  */
 
 /*--------------- Question 3 -----------------
+Q3. Write a program that takes an integer command-line argument n and prints all the positive powers of 2 less than or equal to n. Make sure that your program works properly for all values of n.
+
 package com.company;
 
 import java.util.Scanner;
@@ -89,6 +95,7 @@ public class Main {
 
 
 /*------------------ Question 4 ------------------
+Q4. What is the difference between ++i and i++
 
 i++ and ++i both are increment operators that increase the value by 1. If ++ precedes the variable ,
 its called pre-increment operator and if ++ comes after a variable its called post-increment operator.
@@ -111,6 +118,7 @@ int b=++a; //b=4,a=4
 
 
 /*------------------- Question 5 ---------------------
+Q5. In a for loop, and can be statements more complicated than declaring, initializing, and updating a loop-control variable. How can I take advantage of this ability?
 
 Apart from initialization, condition and updation, the statements can be complicated using "break" and "continue"
 statements.
@@ -158,6 +166,7 @@ o/p: 0
 
 
 /*------------------- Question 6 ----------------------
+Q6 Can I use a double variable as a loop-control variable in a for loop?
 
 It is fine to use a double variable as a loop-control variable, especially if you want to loop through
 fractional values or increment by fractional values.
@@ -169,6 +178,7 @@ Besides, if the value of a double control variable is too large, it's not a good
  */
 
 /*------------------ Question 7 ---------------------
+Q7 . Are there cases where I must use a for loop but not a while, or vice versa?
 
 All the for loops can be written as while loops, and vice-versa. Just use whichever seems more appropriate to the task
 at hand.
@@ -194,6 +204,8 @@ for(<initialization>;<condition>;<updation>)
  */
 
 /*------------------- Question 8 -------------------
+Q8. Write a Java program to sort an array of given integers using the Bubble sorting Algorithm and Heap sort Algorithm.
+
 package com.company;
 
 import java.util.Scanner;
@@ -298,6 +310,8 @@ public class Main {
 
 
 /*----------------- Question 9 ------------------
+Q9. Write a program to find Leap year
+
 package com.company;
 
 import java.util.Scanner;
@@ -346,6 +360,8 @@ public class Main {
 
 
 /*----------------- Question 10 -------------------
+Q10. Write a program GreatestCommonDivisor that finds the greatest common divisor (gcd) of two integers using Euclid’s algorithm, which is an iterative computation based on the following observation: if x is greater than y, then if y divides x, the gcd of x and y is y; otherwise, the gcd of x and y is the same as the gcd of x % y and y
+
 package com.company;
 import java.util.Scanner;
 
@@ -362,17 +378,24 @@ public class GreatestCommonDivisor {
     }
 
     public static int findGCD(int num1, int num2){
-        if(num2==0){
-            return num1;
+        if(num1>num2){
+            return findGCD((num1-num2),num2);
         }
-        return findGCD(num2,num1%num2);
+        else{
+            if(num2%anum1 == 0)
+                return num1;
+            else
+                return findGCD((num2%num1),num1);
+        }
     }
 }
 */
 
-
+  
 
 /*----------------- Question 11 -----------------
+Q11.Write a program converting to binary Input - 19 output -10011 Input - 100000000 Output - 101111101011110000100000000
+
 package com.company;
 
 import java.util.Scanner;
@@ -408,6 +431,8 @@ public class Main {
 
 
 /*------------------ Question 12 -------------------
+Q12. Write a program Checkerboard that takes an integer command-line argument n and uses a loop nested within a loop to print out a two-dimensional n-by-n checkerboard pattern with alternating spaces and asterisks.
+
 package com.company;
 
 
